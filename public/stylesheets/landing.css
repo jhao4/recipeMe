@@ -1,0 +1,83 @@
+body {
+  	background-color: #000;
+}
+
+#landing-header {
+	z-index: 1;
+	position: relative;
+	text-align: center;
+	padding-top: 40vh;
+}
+
+#landing-header h1 {
+  	color: #fff;
+	font-size: 400%;
+}
+
+.slideshow { 
+  	position: fixed;
+  	width: 100%;
+  	height: 100%;
+  	top: 0;
+  	left: 0;
+  	z-index: 0;
+  	list-style: none;
+  	margin: 0;
+  	padding: 0;
+}
+
+.slideshow li { 
+  	width: 100%;
+  	height: 100%;
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	background-size: cover;
+  	background-position: 50% 50%;
+  	background-repeat: no-repeat;
+  	opacity: 0;
+  	z-index: 0;
+  	animation: imageAnimation 50s linear infinite; 
+}
+
+.slideshow li:nth-child(1) { 
+  	background-image: url(https://media3.s-nbcnews.com/i/newscms/2019_41/3044956/191009-cooking-vegetables-al-1422_ae181a762406ae9dce02dd0d5453d1ba.jpg) 
+}
+.slideshow li:nth-child(2) { 
+  	background-image: url(https://cdn.cnn.com/cnnnext/dam/assets/200319162747-family-cooking-stock-super-tease.jpg);
+  	animation-delay: 10s; 
+}
+.slideshow li:nth-child(3) { 
+  	background-image: url(https://api.time.com/wp-content/uploads/2020/03/Home-Chef.jpg);
+  	animation-delay: 20s; 
+}
+.slideshow li:nth-child(4) { 
+	background-image: url(https://i2.wp.com/localemagazine.com/wp-content/uploads/2015/12/20151028_NickIsabella_ChrisPowell-4-e1449083803966.jpg?resize=750%2C400&ssl=1);
+  	animation-delay: 30s; 
+}
+.slideshow li:nth-child(5) { 
+  	background-image: url(https://media-cdn.tripadvisor.com/media/photo-s/15/26/b0/2b/ma-restaurant-live-cooking.jpg);
+  	animation-delay: 40s; 
+}
+
+@keyframes imageAnimation { 
+	0% { 
+    	opacity: 0; 
+    	animation-timing-function: ease-in;
+  	}
+  	10% {
+    	opacity: 1;
+    	animation-timing-function: ease-out;
+  	}
+  	20% {
+    	opacity: 1
+  	}
+  	30% {
+    	opacity: 0
+  	}
+}
+
+/* Older browser support - class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
